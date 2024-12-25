@@ -5,7 +5,7 @@ const props = defineProps<{
   data: Array<any>
 }>()
 
-const weekData = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+const weekData = ['一', '二', '三', '四', '五', '六', '日']
 const formatData = (date: string): string => {
   return dayjs(date).isValid() ? dayjs(date).format('D') : date
 }
@@ -41,7 +41,7 @@ const formatData = (date: string): string => {
 
 <style scoped lang="scss">
 * {
-  --calendar-base-color: #bd0706;
+  --calendar-base-color: #BD0706;
   --calendar-container-bg-color: #fff0d3;
   --calendar-container-item-bg-color: ;
   --calendar-base-font-size: 14px;
@@ -65,8 +65,9 @@ const formatData = (date: string): string => {
     gap: var(--calendar-column-gap);
     height: 30px;
     width: 100%;
-    padding-bottom: 8px;
-    box-shadow: 0 4px 2px -2px rgb(195 184 177);
+    margin-bottom: 8px;
+    position: relative;
+    box-shadow: 0 4px 2px -2px rgba(125, 126, 128, 0.16);
 
     &__item {
       flex: 1;
