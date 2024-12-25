@@ -16,10 +16,6 @@ const router = createRouter({
     {
       path: '/base-dialog',
       component: () => import('../pages/baseDialog/Test.vue')
-    },
-    {
-      path: '/base-progress',
-      component: () => import('../pages/baseProgress/Test.vue')
     }
   ]
 })
