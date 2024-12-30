@@ -2,7 +2,7 @@
 import TestMask from '../testMask/TestMask.vue'
 import Calendar from '../calendar/Calendar.vue'
 import dayjs from 'dayjs'
-  import { Lunar } from 'lunar-typescript'
+import { Lunar } from 'lunar-typescript'
 
 const computeAllDateOfMonth = (date:string):Array<any> => {
   const allDate:any = []
@@ -35,16 +35,15 @@ function getDateInChinese(date: string) {
 <template>
     <div class="home-index">
       <TestMask></TestMask>
-      <Calendar :data="calendarData">
-        <!-- <template #top>
-          <span style="font-size: 10px;">top</span>
-        </template> -->
+      <div style="width: 300px;margin-left: 30px;">
+        <Calendar :data="calendarData">
         <template #bottom="{ date }">
-          <span style="font-size: 10px;">
-            {{ getDateInChinese(date) }}
-          </span>
+          <div style="font-size: 10px;">
+            <div>{{ getDateInChinese(date) }}</div>
+          </div>
         </template>
       </Calendar>
+      </div>
     </div>
 </template>
 

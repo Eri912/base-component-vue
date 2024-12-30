@@ -15,6 +15,7 @@
     "@nutui/nutui": "^4.3.13",
     "dayjs": "^1.11.13",
     "element-plus": "^2.8.6",
+    "html2canvas": "^1.4.1",
     "lunar-typescript": "^1.7.6",
     "pinia": "^2.2.4",
     "vant": "^4.9.8",
